@@ -1,0 +1,7 @@
+region {
+  fill: rgba(0xB4, 0xC7, 0xB2, 1.0)
+  fill-rule: even-odd
+  stroke: rgba(0xFF, 0xFF, 0xFF, 1.0)
+  stroke-line-cap: square
+  stroke-width: 0.2
+}
