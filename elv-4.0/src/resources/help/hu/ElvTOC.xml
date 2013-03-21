@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc categoryopenimage="icon.book.open" categoryclosedimage="icon.book.closed" topicimage="icon.book.page">
+  <tocitem text="Bevezetés" target="introduction">
+    <tocitem text="Valami1"/>
+    <tocitem text="Valami2"/>
+  </tocitem>
+</toc>
