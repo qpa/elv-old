@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JNLP File for ELV Application -->
+<jnlp codebase="$$codebase" href="elv.jnlp" spec="1.6+">
+  <information>
+    <title>Elv</title>
+    <vendor>OKK-OKI</vendor>
+    <homepage href="elv.html"/>
+    <description>Descriptive Epidemiological Analysises</description>
+    <icon href="elv32x32.gif"/>
+    <icon href="splash.gif" kind="splash"/>
+    <shortcut online="true">
+      <desktop/>
+    </shortcut>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <resources locale="" os="">
+    <j2se href="" java-vm-args="-Xms32m -Xmx128m" version="1.6+"/>
+    <jar download="eager" href="elv.jar" main="true"/>
+  </resources>
+  <application-desc main-class="elv.gui.Manager"/>
+</jnlp>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<project name="Elv" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Elv.</description>
+    <import file="nbproject/build-impl.xml"/>
+    
+    <!-- Elv setting: create application .jar file  -->
+    <target name="-pre-dist">
+      <jar destfile="${build.web.dir}/elv.jar">
+        <fileset dir="${build.web.dir}/WEB-INF/classes"/>
+        <!--fileset dir="${build.web.dir}/WEB-INF/lib"/-->
+        <manifest>
+          <attribute name="Built-By" value="${user.name}"/>
+          <attribute name="Main-Class" value="elv.gui.Manager"/>
+        </manifest>
+      </jar>
+      <!--genkey alias="${user.name}" storepass="oqk-ok1" validity="10000">
+        <dname>
+          <param name="CN" value="ELV Developement"/>
+          <param name="OU" value="OKI-Informatics"/>
+          <param name="O"  value="OKK-OKI"/>
+          <param name="L"  value="Budapest"/>
+          <param name="C"  value="HU"/>
+        </dname>
+      </genkey-->
+      <signjar jar="${build.web.dir}/elv.jar" alias="${user.name}" storepass="oqk-ok1"/>
+      <!--delete dir="C:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/elv"/>
+      <mkdir dir="C:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/elv"/>
+      <copy todir="C:/Program Files/Apache Software Foundation/Tomcat 5.5/webapps/elv">
+        <fileset dir="${build.web.dir}"/>
+      </copy-->
+    </target>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+      -pre-init:                 called before initialization of project properties 
+      -post-init:                called after initialization of project properties 
+      -pre-compile:              called before javac compilation 
+      -post-compile:             called after javac compilation 
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-compile-test:         called before javac compilation of JUnit tests
+      -post-compile-test:        called after javac compilation of JUnit tests
+      -pre-compile-test-single:  called before javac compilation of single JUnit test
+      -post-compile-test-single: called after javac compilation of single JUunit test
+      -pre-dist:                 called before jar building 
+      -post-dist:                called after jar building 
+      -post-clean:               called after cleaning build products 
+
+    Example of pluging an obfuscator after the compilation could look like 
+
+        <target name="post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml file. 
+
+
+    Other way how to customize the build is by overriding existing main targets.
+    The target of interest are: 
+
+      init-macrodef-javac:    defines macro for javac compilation
+      init-macrodef-junit:   defines macro for junit execution
+      init-macrodef-debug:    defines macro for class debugging
+      do-dist:                jar archive building
+      run:                    execution of project 
+      javadoc-build:          javadoc generation 
+
+    Example of overriding the target for project execution could look like 
+
+        <target name="run" depends="<PROJNAME>-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that overridden target depends on jar target and not only on 
+    compile target as regular run target does. Again, for list of available 
+    properties which you can use check the target you are overriding in 
+    nbproject/build-impl.xml file. 
+
+    -->
+</project>

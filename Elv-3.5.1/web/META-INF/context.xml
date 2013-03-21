@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/elv">
+  <!--Resource name="jdbc/db" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+            username="qpa" password="xxxyyy" driverClassName="com.ibm.db2.jcc.DB2Driver" url="jdbc:db2://localhost:50000/elv"/-->
+  <Resource name="jdbc/db" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+	    username="postgres" password="postgres" driverClassName="org.postgresql.Driver" url="jdbc:postgresql://10.51.0.10:5432/elv"/>
+  <!--Resource name="jdbc/db" auth="Container" type="javax.sql.DataSource" maxActive="100" maxIdle="30" maxWait="10000"
+	    username="elv" password="elv" driverClassName="org.h2.Driver" url="jdbc:h2:file:d:/data/db/elv;LOG=2"/-->
+  <Environment name="folder/work" value="d:/.elv" type="java.lang.String" override="true"/>
+  <Environment name="folder/log" value="d:/elv-3.5/apache-tomcat-5.5.12/logs" type="java.lang.String" override="true"/>
+  <Environment name="count/concurrent" value="1" type="java.lang.Integer" override="true"/>
+</Context>
